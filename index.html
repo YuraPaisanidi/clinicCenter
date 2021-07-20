@@ -9,115 +9,70 @@
 	<link rel="icon" href="img/favicon.ico">
 	<meta property="og:image" content="img/preview.jpg">
 	<link rel="stylesheet" href="css/app.min.css?v=1">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<script src="js/app.min.js" defer></script>
 
 </head>
 
 <body>
 
-	<header class="header">
-		<div class="header__container container">
-
-			<a href="/" class="header__logo">
-				<img src="img/logo.png" alt="">
-			</a>
-
-			<div class="header__contacts contacts">
-				<a href="mailto:cta.ronc@gmail.com">cta.ronc@gmail.com</a>
-				<a href="tel:+74993241269">+7 499 324 12 69</a>
-				<p>115478, г. Москва, Каширское шоссе, д.23, строение 3</p>
+<!-- <div class="container mt-5">
+	<div class="d-flex justify-content-center row">
+			<div class="col-md-10 col-lg-10">
+					<div class="border active quiz" id="quiz">
+							<div class="question bg-white p-3 border-bottom">
+									<div class="d-flex flex-row justify-content-between align-items-center mcq">
+											<h4>Опросник</span>
+									</div>
+							</div>
+							<div class="question bg-white p-3 border-bottom">
+									<div class="d-flex flex-row align-items-center question-title">
+											<h3 class="text-danger">Q.</h3>
+											<h5 class="mt-1 ml-2">Which of the following country has largest population?</h5>
+									</div>
+									<div class="ans ml-2">
+											<label class="radio"> <input type="radio" name="brazil" value="brazil"> <span>Brazil</span>
+											</label>
+									</div>
+									<div class="ans ml-2">
+											<label class="radio"> <input type="radio" name="Germany" value="Germany"> <span>Germany</span>
+											</label>
+									</div>
+									<div class="ans ml-2">
+											<label class="radio"> <input type="radio" name="Indonesia" value="Indonesia"> <span>Indonesia</span>
+											</label>
+									</div>
+									<div class="ans ml-2">
+											<label class="radio"> <input type="radio" name="Russia" value="Russia"> <span>Russia</span>
+											</label>
+									</div>
+							</div>
+							<div class="d-flex flex-row justify-content-between align-items-center p-3 bg-white">
+								<button class="btn btn-primary d-flex align-items-center btn-danger" type="button"><i class="fa fa-angle-left mt-1 mr-1"></i>&nbsp;previous</button>
+								<button class="btn btn-primary border-success align-items-center btn-success" type="button">Next<i class="fa fa-angle-right ml-2"></i></button>
+							</div>
+					</div>
 			</div>
+	</div>
+</div> -->
 
+<div class="quiz" id="quiz">
+	<div class="quiz-questions" id="questions"></div>
+	<div class="quiz-indicator" id="indicator"></div>
+	<div class="quiz-results" id="results">
+		<div class="quiz-results__item">
+			<div class="quiz-results__item_question"></div>
 		</div>
-	</header>
+	</div>
+	<div class="quiz-controls">
+		<button class="btn-next" id="btn-next" disabled>Далее</button>
+		<button class="btn-restart" id="btn-restart">На главную</button>
+	</div>
+</div>
 
-	<section class="greetings">
-		<div class="container greetings__container">
-			<h1 class="greetings__title">
-				Добро пожаловать на портал клинических исследований ФГБУ «НМИЦ 
-				онкологии им. Н.Н. Блохина» Минздрава России!
-			</h1>
-		</div>
-	</section>
 
-	<section class="about">
-		<div class="about__container container">
-			<p>
-				Здесь вы сможете получить информацию о клинических исследованиях, 
-				которые проводятся в НМИЦ онкологии им. Н.Н. Блохина с 1992 года.
-			</p>
-			<p>
-				Наш центр является одним из лидеров в России по количеству активных клинических 
-				исследований в онкологии, которых в настоящее время насчитывается более 160.
-			</p>
-			<p>
-				24 июня 2002 года в НМИЦ онкологии им. Н.Н. Блохина сформировано отделение организации 
-				и проведения клинических исследований, главной задачей которого является координация и контроль 
-				за качеством проводимых исследований, а также их соответствия этическим нормам, интересам 
-				пациентов и научно-практической деятельности НМИЦ.
-			</p>
-			<p>
-				24 июня 2002 года в НМИЦ онкологии им. Н.Н. Блохина сформировано отделение организации и проведения 
-				клинических исследований, главной задачей которого является координация и контроль за качеством 
-				проводимых исследований, а также их соответствия этическим нормам, интересам пациентов и научно-практической 
-				деятельности НМИЦ.
-			</p>
-
-			<p>
-				Более 30 лет идеологом и организатором клинических исследований в НМИЦ онкологии им. Н.Н. Блохина является 
-				Купчан Дина Зурабовна, которая также возглавляет Локальный этический комитет.
-			</p>
-		</div>
-	</section>
-
-	<section class="info">
-		<div class="info__container container">
-			<h2 class="info__title">
-				НА ПОРТАЛЕ КЛИНИЧЕСКИХ ИССЛЕДОВАНИЙ:
-			</h2>
-			<div class="info__block">
-				<p class="info__text">
-					ПАЦИЕНТЫ могут узнать, что такое клинические исследования и зачем их проводят. 
-					Пройти опрос и выяснить стоит ли им задуматься об участии в клиническом исследовании, 
-					а также подобрать подходящее исследование.
-				</p>
-				<a href="#" class="info__link">Узнать, подходят ли Вам клинические исследования</a>
-				<a href="#" class="info__link">Узнать какие исследования в НМИЦ им. Н.Н. Блохина открыты для набора пациентов</a>
-				<a href="#" class="info__link">Узнать о клинических исследованиях</a>
-			</div>
-			<div class="info__block">
-				<p class="info__text">
-					ВРАЧИ могут больше узнать о клинических исследованиях, 
-					а также узнать какие исследования проводятся в НМИЦ в настоящее время.
-				</p>
-				<a href="#" class="info__link">Информация о клинических исследованиях для медицинских работников</a>
-				<a href="#" class="info__link">Узнать какие исследования в НМИЦ им. Н. Н. Блохина открыты для набора пациентов</a>
-			</div>
-			<div class="info__block">
-				<p class="info__text">
-					ПРЕДСТАВИТЕЛИ ФАРМКОМПАНИЙ могут ознакомиться с порядком подачи документов в 
-					Локальный этический комитет перед началом клинического исследования.
-				</p>
-				<a href="#" class="info__link">Информация для фармкомпаний</a>
-			</div>
-		</div>
-	</section>
-
-	<footer class="footer">
-		<div class="header__container container">
-
-			<a href="/" class="header__logo">
-				<img src="img/logo.png" alt="">
-			</a>
-
-			<div class="header__contacts contacts">
-				<a href="mailto:cta.ronc@gmail.com">cta.ronc@gmail.com</a>
-				<a href="tel:+74993241269">+7 499 324 12 69</a>
-				<p>115478, г. Москва, Каширское шоссе, д.23, строение 3</p>
-			</div>
-
-		</div>
-	</footer>
-
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script> -->
 </body>
 </html>

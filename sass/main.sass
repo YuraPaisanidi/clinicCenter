@@ -1,8 +1,5 @@
 @import base
 
-p, a
-	font-size: 18px
-	line-height: 1.7
 
 // -----CONTAINER-----
 .container
@@ -23,87 +20,78 @@ p, a
 	+r(576)
 		max-width: 480px
 
-// -----HAMBURGER-----
-.header
-	padding: 20px 0
+// body
+// 	background-color: #eee
 
-	&__container
-		+between
-		align-items: center
 
-	&__logo
-		display: flex
-		flex-direction: column
-		justify-content: center
-		width: 100px
-		height: 50px
+// .radio
+// 	cursor: pointer
 
-		img
-			width: 100%
-			height: auto
+// 	input
+// 		position: absolute;
+// 		top: 0;
+// 		left: 0;
+// 		visibility: hidden;
+// 		pointer-events: none
 
-	&__contacts
-		display: flex
-		gap: 30px
+// 	span
+// 		padding: 4px 0px;
+// 		border: 1px solid red;
+// 		display: inline-block;
+// 		color: red;
+// 		width: 100px;
+// 		text-align: center;
+// 		border-radius: 3px;
+// 		margin-top: 7px;
+// 		text-transform: uppercase
 
-		a, p
-			color: $text
-			font-weight: 600
-			+transition
 
-			&:hover
-				color: $accent
+// 	input:checked+span 
+// 		border-color: red;
+// 		background-color: red;
+// 		color: #fff
 
-.greetings
-	padding-bottom: 20px
+// .ans
+// 	margin-left: 36px !important
 
-	&__container
-		display: flex
-		gap: 15px
-		padding: 150px 15px
-		background-color: $bgColor
-		border-radius: 10px
-		overflow: hidden
-		box-shadow: 0px 5px 10px -4px rgba(66, 82, 94, 0.2)
 
-	&__title
-		font-size: 40px
-		text-align: center
-		width: 100%
-		text-align: center
+// .btn
 
-.about
-	padding: 20px 0
+// 	&:focus
+// 		outline: 0 !important;
+// 		box-shadow: none !important
 
-	&__container
-		background-color: $bgColor
-		border-radius: 10px
-		box-shadow: 0px 5px 10px -4px rgba(66, 82, 94, 0.2)
-		padding: 15px
-		display: flex
-		flex-direction: column
-		gap: 15px
 
-.info
-	padding: 20px 0
+.quiz
+	margin: 0 auto
+	width: 600px
 
-	&__container
-		display: flex
-		flex-direction: column
-		gap: 30px
+	&-questions
 
-	&__title
-		text-align: center
+		&__item
+			margin-bottom: 20px
 
-	&__block
-		background-color: $bgColor
-		box-shadow: 0px 5px 10px -4px rgba(66, 82, 94, 0.2)
-		border-radius: 10px
-		padding: 15px
-		display: flex
-		flex-direction: column
-		gap: 5px
+			&_question,
+			&_answers
+				margin: 0
+				padding: 0
+				margin-bottom: 20px
 
-.footer
-	&__container
-		+between
+	&-indicator
+		margin-bottom: 20px
+
+	&-results
+		display: none
+
+.btn-restart
+	display: none
+
+
+.questions-hidden,
+.indicator-hidden,
+.btn-next-hidden
+	display: none
+
+.results-visible,
+.btn-restart-visible
+	display: block
